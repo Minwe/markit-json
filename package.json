@@ -1,25 +1,25 @@
 {
-  "name": "markit-json",
-  "version": "0.1.0",
-  "description": "Parse Markdown YAML meta data and compile Markdown to HTML, wrap it all up in JSON.",
+  "name": "gulp-marked-json",
+  "version": "1.0.0",
+  "description": "Parse Markdown YAML meta data and- compile Markdown to HTML, wrap it all up in JSON.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Minwe/markit-json/issues"
+    "url": "https://github.com/minwe/gulp-marked-json/issues"
   },
   "author": {
     "name": "minwe",
     "email": "hegirose@gmail.com",
-    "url": "http://csspod.com"
+    "url": "https://csspod.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Minwe/markit-json.git"
+    "url": "https://github.com/minwe/gulp-marked-json.git"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "jshint index.js; mocha test/test.js"
+    "test": "eslint index.js; mocha test/test.js"
   },
   "files": [
     "index.js"
@@ -35,12 +35,12 @@
     "markit"
   ],
   "dependencies": {
-    "front-matter": "^0.2.0",
-    "gulp-util": "^2.2.0",
-    "markit": "^0.1.0",
-    "through2": "^0.4.0"
+    "front-matter": "^2.0.7",
+    "gulp-util": "^3.0.7",
+    "marked": "^0.3.5",
+    "through2": "^2.0.1"
   },
   "devDependencies": {
-    "vinyl-fs": "~0.3.5"
+    "vinyl-fs": "^2.4.3"
   }
 }

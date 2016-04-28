@@ -1,9 +1,10 @@
 language: node_js
 
 node_js:
-  - "0.10"
+  - "lts"
+  - "stable"
 
 before_install:
-  - npm install -g mocha jshint
+  - npm install -g mocha eslint
 
 script: npm test

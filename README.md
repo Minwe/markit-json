@@ -1,12 +1,17 @@
-# markit-json [![Build Status](https://travis-ci.org/Minwe/markit-json.svg)](https://travis-ci.org/Minwe/markit-json)
+# gulp-marked-json
+
+[![NPM version](https://img.shields.io/npm/v/gulp-marked-json.svg?style=flat-square)](https://www.npmjs.com/package/gulp-marked-json)
+[![Build Status](https://img.shields.io/travis/minwe/gulp-marked-json.svg?style=flat-square)](https://travis-ci.org/minwe/gulp-marked-json)
+[![Dependency Status](https://img.shields.io/david/minwe/gulp-marked-json.svg?style=flat-square)](https://david-dm.org/minwe/gulp-marked-json)
+[![devDependency Status](https://img.shields.io/david/dev/minwe/gulp-marked-json.svg?style=flat-square)](https://david-dm.org/minwe/gulp-marked-json#info=devDependencies)
 
 - Parse YAML front matter and Markdown body content with [front-matter][front-matter]
-- Compile Markdown to HTML with [markit][marked]
+- Compile Markdown to HTML with [marked][marked]
 
 ### Install
 
 ```bash
-$ npm install markit-json --save-dev
+$ npm install gulp-marked-json --save-dev
 ```
 
 ### Usage
@@ -17,7 +22,7 @@ Like any self-respecting gulp plugin, transformed source files will flow onward 
 
 ```javascript
 var gulp = require('gulp');
-var markdown = require('markit-json');
+var markdown = require('gulp-marked-json');
 
 gulp.task('markdown', function(){
   gulp.src('./content/**/*.md')
@@ -56,7 +61,7 @@ copyright &copy; 2014 sparkart group, inc.
 
 [gulp-util]: https://github.com/gulpjs/gulp-util#buffercb
 [front-matter]: https://github.com/jxson/front-matter
-[marked]: https://github.com/lepture/markit
+[marked]: https://github.com/chjj/marked
 [marked-config]: https://github.com/lepture/markit#usage
 [handlebars]: https://github.com/wycats/handlebars.js
 [circleci]: https://circleci.com/gh/SparkartGroupInc/gulp-markdown-to-json.png?style=shield&circle-token=8bf33da398b8ab296fe670c81b3fecbae1471e25
