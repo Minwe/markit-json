@@ -36,11 +36,12 @@
   ],
   "dependencies": {
     "front-matter": "^2.0.7",
-    "gulp-util": "^3.0.7",
     "marked": "^0.3.5",
+    "plugin-error": "^0.1.2",
     "through2": "^2.0.1"
   },
   "devDependencies": {
+    "vinyl": "^2.1.0",
     "vinyl-fs": "^2.4.3"
   }
 }

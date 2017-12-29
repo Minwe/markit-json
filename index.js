@@ -1,12 +1,11 @@
 'use strict';
 
-var gulpUtil = require('gulp-util');
 var through = require('through2');
 var frontMatter = require('front-matter');
 var marked = require('marked');
+var PluginError = require('plugin-error');
 
 var NAME = 'gulp-marked-json';
-var PluginError = gulpUtil.PluginError;
 var streamingErr = new PluginError(NAME, 'Streaming not supported');
 
 function parse(file, flatten, options) {
@@ -45,7 +44,7 @@ function parse(file, flatten, options) {
       data = data[path];
     }
 
-    file.path = gulpUtil.replaceExtension(file.path, '.json');
+    file.extname = '.json';
     file.contents = new Buffer(JSON.stringify(data));
 
     return file;
