@@ -1,6 +1,6 @@
 {
   "name": "gulp-marked-json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Parse Markdown YAML meta data and- compile Markdown to HTML, wrap it all up in JSON.",
   "license": "MIT",
   "bugs": {
@@ -41,6 +41,8 @@
     "through2": "^2.0.1"
   },
   "devDependencies": {
+    "eslint": "^4.14.0",
+    "mocha": "^4.1.0",
     "vinyl": "^2.1.0",
     "vinyl-fs": "^2.4.3"
   }
