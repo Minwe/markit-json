@@ -2,10 +2,10 @@
 
 var assert = require('assert');
 var fs = require('vinyl-fs');
-var gutil = require('gulp-util');
 var path = require('path');
 var util = require('util');
 var Readable = require('stream').Readable;
+var Vinyl = require('vinyl');
 
 var markdown = require('../index');
 
@@ -28,7 +28,7 @@ var fixture_config = [{
 describe('parser', function(){
 
   it('should parse Markdown content and return markup wrapped in JSON', function( done ){
-    var fixture = new gutil.File(fixture_config[0]);
+    var fixture = new Vinyl(fixture_config[0]);
 
     markdown()
       .on('data', function( file ){
@@ -39,7 +39,7 @@ describe('parser', function(){
   });
 
   it('should pass on configuration objects to the marked module', function( done ){
-    var fixture = new gutil.File(fixture_config[0]);
+    var fixture = new Vinyl(fixture_config[0]);
 
     markdown({
       smartypants: true
@@ -52,7 +52,7 @@ describe('parser', function(){
   });
 
   it('should parse YAML front matter and merge keys', function( done ){
-    var fixture = new gutil.File(fixture_config[0]);
+    var fixture = new Vinyl(fixture_config[0]);
 
     markdown()
       .on('data', function( file ){
@@ -64,7 +64,7 @@ describe('parser', function(){
   });
 
   it('should extract a title if first line of Markdown is an atx-style h1', function( done ){
-    var fixture = new gutil.File(fixture_config[1]);
+    var fixture = new Vinyl(fixture_config[1]);
 
     markdown()
       .on('data', function( file ){
@@ -76,7 +76,7 @@ describe('parser', function(){
   });
 
   it('should extract a title if first line of Markdown is a setext-style h1', function( done ){
-    var fixture = new gutil.File(fixture_config[2]);
+    var fixture = new Vinyl(fixture_config[2]);
 
     markdown()
       .on('data', function( file ){
@@ -88,7 +88,7 @@ describe('parser', function(){
   });
 
   it('should prefer YAML front matter titles over a extracted Markdown h1', function( done ){
-    var fixture = new gutil.File(fixture_config[3]);
+    var fixture = new Vinyl(fixture_config[3]);
 
     markdown()
       .on('data', function( file ){
